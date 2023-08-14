@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    {% if filter=="due" %}
+        <h1>Amount Due By Block</h1>
+        {% elif filter=="outstanding" %}
+        <h1>Amount outstanding</h1>
+        {% elif filter=="paid" %}
+        <h1>Amount Paid By Block</h1>
+        {% else %}
+        <h1>Amount Outstanding By Block</h1>
+        {% endif %}
+    <div>
+        <div class="row">
+            {% for b in blocks %}
+
+            <div class="col-md-3 col-6 answerCard" >
+             
+                    <div> 
+                        <a style="color: black; text-decoration: none;" href="{{url_for("adminblock", id=b.id)}}">
+                            <h6>Block {{b.id}} </h6>  
+                            {% if filter=="due" %}
+                                <h6 class="text-muted">Amount Due: {{b.due}}</h6>
+                            {% elif filter=="outstanding" %}
+                                <h6 class="text-muted">{{b.outstanding}}</h6>
+                            {% elif filter=="paid" %}
+                                <h6 class="text-muted">Ghs {{b.paid}} </h6> 
+                            {% else %}
+                                <!-- <h6 class="text-muted">Amount Due: {{b.due}}</h6>
+                                <h6 class="text-muted">Amount Paid: {{b.paid}}</h6> -->
+                                <h6 class="text-muted">Amount Outstanding: {{b.outstanding}}</h6> 
+                            {% endif %}
+                        </a>   
+                    </div>
+
+                </div>
+
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

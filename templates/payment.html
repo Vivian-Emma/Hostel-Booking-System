@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{url_for("static", filename="css/style.css")}}">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+<div class="container">
+
+<form method="POST" style="margin-bottom: 5vh;">
+    {{form.hidden_tag()}}
+
+  <h2 style="text-align: center; margin: 15px 10px; font-size: 25px;">PAYMENT FORM</h2>
+  
+
+  <h3 style="font-size: 16px;"><b>Payment Information</b></h3>
+  <p style="font-size: 16px;">Kindly fill-in this payment form:</p>
+
+  
+  <div class="form-floating mb-3">
+    {{form.name (class="form-control webForm", placeholder="Enter")}}
+    {{form.name.label}}
+  </div>
+  <div class="form-floating mb-3">
+    {{form.amount (class="form-control webForm",min=minAmount, max=maxAmount, placeholder="Enter")}}
+    {{form.amount.label}}
+    <h6 class="text-muted" style="font-size: 14px;">GHS {{minAmount}} is the minimum amount you can pay to secure a bed in this room.</h6>
+  </div>
+  <div class="form-floating mb-3">
+    {{form.roomNumber (disabled = True, class="form-control webForm", placeholder="Enter")}}
+    {{form.roomNumber.label}}
+  </div>
+
+  <hr style="color: rgb(192, 192, 192);">
+  <div class="form-floating mb-3">
+    {{form.id (class="form-control webForm", placeholder="Enter")}}
+    {{form.id.label}}
+  </div>
+  <div class="form-floating mb-3">
+    {{form.network (class="form-control webForm", placeholder="Enter")}}
+    {{form.network.label}}
+  </div>
+  <div class="form-floating mb-3">
+    {{form.phone (class="form-control webForm", placeholder="Enter")}}
+    {{form.phone.label}}
+  </div>
+  
+   {{form.submit (class="pill-button", style="width:100%", onclick="") }}
+
+   </form>
+
+</div>  
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+</html>

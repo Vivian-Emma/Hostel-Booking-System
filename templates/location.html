@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Please pick a room location</h1>
+    <br/>
+    <div>
+        <div>
+            <div class="row">
+                {% for r in roomtype %}
+
+                <div class="col-md-4 answerCard">
+                    <a style="text-decoration: none;" href="{{url_for("rooms", id=r.id)}}">
+                        <div class="inactiveRoom">    
+                            <h6>{{r.location}}</h6>    
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

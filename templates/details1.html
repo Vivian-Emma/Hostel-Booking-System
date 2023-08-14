@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+ <hr>
+    <section style="padding-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../static/img/double.jpg" class="img-fluid " alt="...">
+                    <div class="row d-none d-xl-flex" style="padding-top: 2vh;">
+                        <div class="col-md-6">
+                            <img src="../static/img/double.jpg" class="img-fluid " alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../static/img/double.jpg" class="img-fluid " alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding: 10px;">
+                    <div class="inn-detail-p1 inn-com">
+                        <h2>Double Suite Room</h2>
+                        <p>A comfortable space for two people.With the double suite ,it is shared among two individuals and the room is very spacious to contain all your stuffs.It has two separate bed for each person.</p>
+                        <!-- <p>Brazil’s view takes you through clouds of mist and the opportunity to see these 275 falls, spanning nearly two miles! Argentina’s side allows you to walk along the boardwalk network and embark on a jungle train through the forest for unforgettable views. Hear the deafening roar and admire the brilliant rainbows created by the clouds of spray, and take in the majesty of this wonder of the world. From vibrant cities to scenic beauty, this vacation to Rio de Janeiro, Iguassu Falls, and Buenos Aires will leave you with vacation memories you’ll cherish for life.</p> -->
+                    </div>
+
+                    <hr>
+
+                    <div class="inn-detail-p1 inn-com inn-com-list-point">
+                        <div class="detail-title">
+                            <h2>Room Amenities</h2>
+                            <p></p>
+                        </div>
+                        <ul style="list-style-type: none;">
+                            <li><i class="fa fa-check" aria-hidden="true"></i>Kitchen </li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Air condition</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Free Wi-Fi</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Two student table and chair </li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Television</li>
+                        </ul>
+                    </div>
+                    <button class="card- title pill-button" style="width: fit-content; margin-bottom: 15px;">Price: GHS 4700/academic year</button>
+
+                    <hr>
+                    
+                    <div>
+                        <div class="card">
+                            <div class="card-body">
+                            <div class=" form-floating mb-3">
+                                {{form.checkin (class="form-control webForm", placeholder="Enter")}}
+                                {{form.checkin.label}}
+                                <h6 class="text-muted">Please enter the date you intend to occupy the room.</h6>
+                            </div>
+                            <div class=" form-floating mb-3">
+                                {{form.location (class="form-control webForm", placeholder="Enter")}}
+                                {{form.location.label}}
+                            </div>
+                            
+                            <a href="/form">
+                                <button class="pill-button" style="width: 100%;"> contact now</button>
+                              </a>
+                            <!-- {{form.submit (class="pill-button", style="width:100%" ) }} -->
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

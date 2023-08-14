@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+     
+  <form method="POST">
+    {{form.hidden_tag()}}
+  
+    <h2 style="text-align: center; margin: 15px 10px; font-size: 25px Mulish sans,serif;">BOOK A ROOM</h2>
+    
+    <h3 style="font-size: 20px;">Personal Information:</h3>
+    
+    <div class="form-floating mb-3">
+      {{form.name (class="form-control webForm", placeholder="Enter")}}
+      {{form.name.label}}
+    </div>
+    <div class="form-floating mb-3">
+      {{form.studentId (class="form-control webForm", placeholder="Enter")}}
+      {{form.studentId.label}}
+      <h6 class="text-muted">If you have not recieved a student id, please enter the id given to you on your admission letter.</h6>
+    </div>
+    <div class="form-floating mb-3">
+      {{form.email (class="form-control webForm", placeholder="Enter")}}
+      {{form.email.label}}
+    </div>
+    <div class="form-floating mb-3">
+      {{form.phone (class="form-control webForm", placeholder="Enter")}}
+      {{form.phone.label}}
+      <h6 class="text-muted">Please enter the number you are most reachable on.</h6>
+      
+    </div>
+    <div class="form-floating mb-3">
+      {{form.course (class="form-control webForm", placeholder="Enter")}}
+      {{form.course.label}}
+    </div>
+    <div class="form-floating mb-3">
+      {{form.level (class="form-control webForm", placeholder="Enter")}}
+      {{form.level.label}}
+    </div>
+
+    
+    <!-- <h3 style="font-size: 20px;">Reservation Details:</h3> -->
+    
+    <div class="form-floating mb-3">
+      {{form.checkin (class="form-control webForm", placeholder="Enter")}}
+      {{form.checkin.label}}
+      <h6 class="text-muted">Please enter the date you intend to occupy the room.</h6>
+    </div>
+    
+    <h3 style="font-size: 20px;">Emergency Contact Details:</h3>
+    
+    <div class="form-floating mb-3">
+      {{form.relation (class="form-control webForm", placeholder="Enter")}}
+      {{form.relation.label}}
+    </div>
+
+    <div class="form-floating mb-3">
+      {{form.nameOfEmergencyContact (class="form-control webForm", placeholder="Enter")}}
+      {{form.nameOfEmergencyContact.label}}
+    </div>
+
+    <div class="form-floating mb-3">
+      {{form.emergencyContact (class="form-control webForm", placeholder="Enter")}}
+      {{form.emergencyContact.label}}
+      <h6 class="text-muted">Please enter the number the person is most reachable on.</h6>
+    </div>
+
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Terms and Condition
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <p><b>Payment and Registration</b> <br>
+                <ul>
+                          <li>Hostel fees are to be paid in full or in installments(a minimum deposit of 60%), as agreed upon with management, and the room registration form must be  completed and signed before occupancy can be deemed to be in effect.</li>
+                          <li>Payment of hostel fees in full  is due before the resumption of the second semester or within a month after occupying the room, whichever once comes first.</li>
+                          <li>Late payment of hostel fees may result in additional charges, penalties, or restrictions on access to hostel services or amenities, as determined by management.</li>
+                          <li>Failure to pay hostel fees or to comply with the terms of payment may result in termination of the occupancy agreement and eviction from the hostel.</li>
+                        </ul>
+                      </p>
+                      <p><b>Room allocation and transfer</b> <br>
+                        <ul>
+                          <li>Any room allocated by management is strictly non-transferable and may not be sublet or shared with other occupants without the written consent of management.</li>
+                          <li>Occupants may request a change of room by filling out a room change request form and receiving approval from management.</li>
+                          <li>Requests for room changes may be granted or denied at the discretion of management, based on availability, occupancy needs, and other factors.</li>
+                          <li>Occupants are responsible for ensuring that their room is clean, orderly, and well-maintained, and for complying with all hostel rules and regulations related to the use and care of their room.</li>
+                      </ul>
+                    </p>
+                    <p><b>Duration of occupancy</b> <br>
+                      <ul>
+                          <li>The duration of occupancy is for the length of the academic year, unless otherwise agreed upon in writing with management.</li>
+                          <li>Occupants must vacate their rooms within a reasonable time(3 days) after their occupancy term has expired, as specified by management.</li>
+                          <li>Occupants may be allowed to store their personal belongings in their rooms during the long vacation or other breaks, subject to the availability of storage space and the approval of management.</li>
+                          <li>Occupants are responsible for the security and care of their personal belongings, and for arranging their own insurance or other protection as needed.</li>
+                      </ul>
+                  </p>
+                  <p><b>Utilities and Services</b> <br>
+                      <ul>
+                          <li>Occupants are entitled to GHS 50 of prepaid electricity credit per semester, which is contingent on meeting at least 60% of the full balance due. Prepaid electricity credit will be disbursed twice every semester, once at the beginning of the semester and four weeks after the commencement of the semester. Occupants are responsible for monitoring their meter usage and topping up their prepaid electricity credit as needed. The hostel will not be held responsible for power outages that result from a failure of the occupant to top up their meter in a timely and sufficient manner. Complimentary prepaid credits are not transferable from semester to semester.</li>
+                      </ul>
+                    </p>
+                  <p><b>Prohibited Items and Activities</b> <br>
+                      <ul>
+                        <li>Occupants are not allowed to keep firearms, explosives, ammunition, or other lethal weapons during their stay. The hostel has the right to confiscate any such items and to evict the occupants if they violate this policy.</li>
+                        <li>Occupants are not allowed to host parties, celebrations, or festivals without the prior written consent of the management. The hostel may impose additional charges or fees for hosting events, and may require the occupants to comply with certain rules and regulations.</li>
+                        
+                      </ul>
+                    </p>
+                    <p><b>Liability and Responsibility</b> <br>
+                      <ul>
+                          <li>The hostel will not be held liable for any damages or repairs that occur after the occupants take charge of their allocated rooms, except in extraordinary circumstances as ascertained by the relevant artisans (e.g. plumber, electrician, etc.). Occupants are responsible for maintaining their rooms in a clean and orderly condition, and for reporting any maintenance issues to the hostel in a timely manner.</li>
+                          <li>The hostel will not be held liable for the replacement of misplaced or damaged room keys. Occupants are required to drop off their room keys and log the time of drop off and collection of said keys at the front desk/porter's lodge during breaks and  vacation periods.</li>
+                          <li>Occupants are not allowed to operate commercial activities on hostel premises without the prior written consent of the management.</li>
+                          
+                        </ul>
+                  </p>
+                  <p><b>Visitors and Guests</b> <br>
+                      <ul>
+                        <li>All visitors (male and female) must present a valid nationally recognized ID at the Porter's lodge before entry.</li>
+                        <li>Occupants are not allowed to host visitors (sleep overs) without the prior written consent of the management.</li>
+                        <li>Visiting hours are from 7:00am to 12:00am, Monday to Sunday.</li>
+                          <li>The hostel reserves the right to refuse entry to any visitor who fails to comply with these rules or who poses a security risk.</li>
+                        </ul>
+                      </p>
+                      <p><b>Refunds and Cancellations</b> <br>
+                      <ul>
+                          <li>The hostel offers a full refund on the first payment or deposit if the refund is requested in writing within one week of making the payment. A 15% administrative fee will be applied to all refunds.</li>
+                          <li>Cancellations must be made in writing and will be subject to the same administrative fee.</li>
+                          <li>No refunds will be granted after the occupancy period has begun, except in extraordinary circumstances as determined by the hostel management.</li>
+                          
+                        </ul>
+                      </p>
+                  <p><b>Miscellaneous</b> <br>
+                    <ul>
+                      <li>The hostel reserves the right to update these terms and conditions at any time. It is the responsibility of the occupants to stay informed of any changes.</li>
+                      <li>The hostel management reserves the right to evict any occupants who violate these terms and conditions or who engage in any disruptive or illegal activities.</li>
+                          <li>Any disputes or complaints must be reported to the hostel management in writing and will be resolved in accordance with the laws of the Republic of Ghana.</li>
+                          
+                        </ul>
+                      </p>
+                      
+                  Please check the box below to complete this section of the form.
+              </p>
+              <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="agreement">
+              <label class="form-check-label" for="agreement"><b>I have read, understood and consent to the terms and conditions</b></label>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="agreement">
+      <label class="form-check-label" for="agreement">I agree to the terms and conditions</label>
+    </div> -->
+
+    <br/>
+    <!-- <a href="">
+      <button class="pill-button">
+        Pay Now
+      </button>
+    </a> -->
+    {{form.submit (class="pill-button", style="width:100%" ) }}
+  </form>
+
+</div>  
+
+{% endblock %}

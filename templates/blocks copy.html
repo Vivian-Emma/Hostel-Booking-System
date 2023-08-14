@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Block</th>
+                    <th scope="col">Room Number</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for block in blocks %}
+
+                <tr class="">
+                    <td scope="row">{{block.id}}</td>
+                    <td>{{block.block}}</td>
+                    <td>{{block.number}}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    
+
+</body>
+</html>

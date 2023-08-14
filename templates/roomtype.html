@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Please pick a room type</h1>
+    <br/>
+    <div>
+        <div class="row">
+            <h6>BASIC</h6>
+            {% for r in roomtype %}
+                <div class="col-md-4">
+                    <a style="text-decoration: none;" href="{{url_for("location", roomtype=r.name, tier=r.basic)}}">
+                        <div class="answerCard" style="color:black">    
+                            <div>
+                                <h6>{{r.name}} in a room</h6> 
+                                <h6>GHS {{r.basic}} </h6>  
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+
+            <h6>PREMIUM</h6>
+            <p class="text-muted">The rooms in this package are bigger.</p>
+            {% for r in roomtype %}
+                <div class="col-md-4">
+                    <a style="text-decoration: none;" href="{{url_for("location", roomtype=r.name, tier=r.premium)}}">
+                        <div class="answerCard" style="color:black"> 
+                            
+                            <div>
+                                <h6>{{r.name}} in a room </h6>  
+                                <h6>GHS {{r.premium}} </h6>  
+                            </div>  
+                                
+                            <!-- <h6>{{r.range}}</h6>     -->
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

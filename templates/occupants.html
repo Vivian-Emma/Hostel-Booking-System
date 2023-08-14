@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h1>All Occupants</h1>
+    <div>
+        <div class="row">
+            {% for o in alloccupants %}
+
+            <div class="col-md-3 col-6 answerCard" >
+             
+                    <div> 
+
+                            <h6>{{o.id}} - roomId:{{o.roomid}} </h6>  
+                            <h6>{{o.name}} - {{o.phone}} </h6>  
+                            <h6>Room {{o.room}} Block {{o.block}} </h6>  
+                            <h6>Paid - {{o.paid}} </h6>  
+
+                   
+                    </div>
+
+                </div>
+
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
